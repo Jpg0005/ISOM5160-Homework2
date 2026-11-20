@@ -1,4 +1,6 @@
 streamlit
 transformers>=4.33,<5.0
-torch
+# Streamlit Cloud uses Linux x86_64 with Python 3.12 and runs inference on CPU.
+torch @ https://download-r2.pytorch.org/whl/cpu/torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=0955c7e3446326293f48af18fad67872fa31dee5a36a87690eb9e5be8b465be3 ; sys_platform == "linux" and platform_machine == "x86_64" and python_version == "3.12"
+torch ; sys_platform != "linux" or platform_machine != "x86_64" or python_version != "3.12"
 datasets
