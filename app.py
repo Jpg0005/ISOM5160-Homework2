@@ -55,7 +55,7 @@ SECRET PHRASE (must appear on the app page): ISOM5160-HW2-SMS
 
 import streamlit as st
 from datasets import load_dataset
-from transformers import pipeline
+from transformers.pipelines import pipeline
 
 # Locked by the instructor — do not change these four values.
 DATASET_ID = "ucirvine/sms_spam"
